@@ -17,33 +17,57 @@ def guitar_detail(request, pk):
 def action(request):
     return HttpResponse('action')
 
+def get_max_guitar_id():
+    max_id = None
+    if models.Guitars.objects.all():
+        max_id = models.Guitars.objects.order_by('-id')[0].id #order by desc, get first elem id
+    if not max_id:
+        max_id = 0
+    return max_id
+
+def get_max_body_id():
+    max_id = None
+    if models.Body.objects.all():
+        max_id = models.Body.objects.order_by('-id')[0].id #order by desc, get first elem id
+    if not max_id:
+        max_id = 0
+    return max_id
+
+def get_max_producer_id():
+    max_id = None
+    if models.Producer.objects.all():
+        max_id = models.Producer.objects.order_by('-id')[0].id #order by desc, get first elem id
+    if not max_id:
+        max_id = 0
+    return max_id
+
 def add(request):
     if request.method == 'POST':
         form = GuitarAddForm(request.POST)
         if form.is_valid():
-            max_id = None
-            if models.Guitars.objects.all():
-                max_id = models.Guitars.objects.order_by('-id')[0].id #order by desc, get first elem id
-            if not max_id:
-                max_id = 0
-            guitar = models.Guitars.objects.create(id=int(max_id)+1,
-                                                   name=form.cleaned_data['name'],
-                                                   string_amount=form.cleaned_data['string_amount'],
-                                                   price=form.cleaned_data['price'],)
+            max_guitar_id = get_max_guitar_id()
+            max_body_id = get_max_body_id()
+            max_producer_id = get_max_producer_id()
+            models.Guitars(
+               id=int(max_guitar_id)+1,
+               name=form.cleaned_data['name'],
+               string_amount=form.cleaned_data['string_amount'],
+               price=form.cleaned_data['price'],
+               neck_material=form.cleaned_data['neck_material'],
+               fretboard_material=form.cleaned_data['fretboard_material'],
+               pick_guard=form.cleaned_data['pick_guard'],
+               type=form.cleaned_data['type'],
+               body=models.Body(id = int(max_body_id) + 1,
+                          material=form.cleaned_data['body_material'],
+                          color=form.cleaned_data['body_color'],
+                          type=form.cleaned_data['body_type'],
+                          form=form.cleaned_data['body_form']).save(),
+               producer=models.Producer(id=int(max_producer_id)+1,
+                          name=form.cleaned_data['producer_name'],
+                          rating=form.cleaned_data['producer_rating'],
+                          info=form.cleaned_data['producer_info']).save()).save()
 
-            """ name = models.CharField(max_length=45, null=True)
-            string_amount = models.IntegerField(null=True)
-            price = models.IntegerField(null=True)
-            neck_material = models.CharField(max_length=45, null=True)
-            fretboard_material = models.CharField(max_length=45, null=True) # Field name made lowercase.
-            pick_guard = models.NullBooleanField(null=True, default=False) # Field name made lowercase.
-            type = models.CharField(max_length=45, null=True)
-            body = EmbeddedModelField('Body', null=True)
-            bridge = EmbeddedModelField('Bridge', null=True)
-            pickups = EmbeddedModelField('Pickup', null=True)
-            producer = EmbeddedModelField('Producer', null=True) """
-
-            guitar.save()
+            #guitar.save()
             return HttpResponseRedirect('/')
         else:
             return HttpResponse('Form is not valid')

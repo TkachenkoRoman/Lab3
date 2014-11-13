@@ -22,15 +22,48 @@
             {{ form.string_amount|bootstrap}}
             {{ form.price|bootstrap}}
             {{ form.neck_material|bootstrap}}
+            {{ form.fretboard_material|bootstrap}}
             {{ form.pick_guard|bootstrap}}
             {{ form.type|bootstrap}}
-            <div class="jumbotron" style="width: 25%;background-color: #EDF3FE;">
-            {{ form.body_material|bootstrap}}
-            {{ form.body_color|bootstrap}}
-            {{ form.body_type|bootstrap}}
-            {{ form.body_form|bootstrap}}
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div>
+                        <h3 style="text-align: left">Body</h3>
+                        {{ form.body_material|bootstrap}}
+                        {{ form.body_color|bootstrap}}
+                        {{ form.body_type|bootstrap}}
+                        {{ form.body_form|bootstrap}}
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                        <h3 style="text-align: left">Producer</h3>
+                        {{ form.producer_name|bootstrap}}
+                        {{ form.producer_rating|bootstrap}}
+                        {{ form.producer_info|bootstrap}}
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                        <h3 style="text-align: left">Bridge</h3>
+                        {{ form.bridge_name|bootstrap}}
+                        {{ form.bridge_material|bootstrap}}
+                        {{ form.bridge_color|bootstrap}}
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                        <h3 style="text-align: left">Pickup</h3>
+                        {{ form.pickup_type|bootstrap}}
+                        {{ form.pickup_set_type|bootstrap}}
+                        </div>
+                    </div>
+                </div>
+                <input style="margin-top: 50px;" type="submit" class="btn btn-default" value="Save" />
             </div>
-            <div><input type="submit" class="btn btn-default" value="Save" /></div>
+
         </div>
     </form>
 <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>

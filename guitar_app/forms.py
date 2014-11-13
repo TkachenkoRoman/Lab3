@@ -17,9 +17,18 @@ class GuitarAddForm(Form):
     fretboard_material = CharField(required=False)
     pick_guard = NullBooleanField(required=False)
     type = CharField(required=False)
-    body_material = CharField(required=False)
-    body_color = CharField(required=False)
-    body_type = CharField(required=False)
-    body_form = CharField(required=False)
+    body_material = CharField(required=False, label="material")
+    body_color = CharField(required=False, label="color")
+    body_type = CharField(required=False, label="type")
+    body_form = CharField(required=False, label="form")
+    producer_name = CharField(required=False, label='name')
+    producer_rating = IntegerField(required=False, label='rating')
+    producer_info = CharField(required=False, label='info')
+    bridge_name = CharField(required=False, label='name')
+    bridge_material = CharField(required=False, label='material')
+    bridge_color = CharField(required=False, label='color')
+    pickup_type = CharField(required=False, label='type')
+    pickup_set_type = CharField(required=False, label='set type')
+
 
 
