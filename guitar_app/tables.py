@@ -12,4 +12,4 @@ class GuitarTable(tables.Table):
     class Meta:
         model = models.Guitars
         attrs = {"class": "paleblue"}
-        exclude = ['id']
+        #exclude = ['id']

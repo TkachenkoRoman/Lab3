@@ -4,6 +4,7 @@ from django.db import models
 from djangotoolbox.fields import EmbeddedModelField, ListField
 from mongoengine import Document, StringField, IntField, BooleanField
 
+
 class Producer(models.Model):
     #id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=45, blank=True, null=True)
@@ -33,7 +34,7 @@ class Bridge(models.Model):
         return self.name
 
 class Guitars(models.Model):
-    #id = models.IntegerField(primary_key=True)
+    id = models.IntegerField(max_length=50, primary_key=True)
     name = models.CharField(max_length=45, null=True)
     string_amount = models.IntegerField(null=True)
     price = models.IntegerField(null=True)
