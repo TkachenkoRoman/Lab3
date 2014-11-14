@@ -6,4 +6,5 @@ urlpatterns = patterns('',
     url(r'^guitar_detail/(?P<pk>[a-z\d]+)/', views.guitar_detail, name='guitar_detail'),
     url(r'^action/', views.action, name='action'),
     url(r'^add/', views.add, name='add'),
+    url(r'^statistics/', views.statistics, name='statistics'),
 )
