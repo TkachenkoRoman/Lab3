@@ -12,10 +12,27 @@ def index(request):
     return render(request, 'guitar_app/index.html', {'table': table})
 
 def guitar_detail(request, pk):
-    return HttpResponse('guitar detail id= ' + pk)
+    if request.method == 'POST':
+        form = GuitarAddForm(request.POST)
+        if form.is_valid():
+            guitar = models.Guitars.objects.get(pk=pk)
+            t = GuitarAddForm(request.POST, instance=guitar)
+            t.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = GuitarAddForm(instance=models.Guitars.objects.get(pk=pk))
+        return render(request, 'guitar_app/guitar_detail.html', {'form': form, 'pk': pk})
 
 def action(request):
-    return HttpResponse('action')
+    if request.method == 'POST':
+        action = request.POST.get('action', False)
+        if action:
+            pks = request.POST.getlist("selection")
+            #selected_objects = models.Guitar.objects.filter(pk__in=pks)
+            if action == 'delete':
+                models.Guitars.objects.filter(pk__in=pks).delete()
+        return HttpResponseRedirect('/')
+    return HttpResponse('no POST in action view')
 
 def get_max_guitar_id():
     max_id = None
@@ -25,29 +42,11 @@ def get_max_guitar_id():
         max_id = 0
     return max_id
 
-def get_max_body_id():
-    max_id = None
-    if models.Body.objects.all():
-        max_id = models.Body.objects.order_by('-id')[0].id #order by desc, get first elem id
-    if not max_id:
-        max_id = 0
-    return max_id
-
-def get_max_producer_id():
-    max_id = None
-    if models.Producer.objects.all():
-        max_id = models.Producer.objects.order_by('-id')[0].id #order by desc, get first elem id
-    if not max_id:
-        max_id = 0
-    return max_id
-
 def add(request):
     if request.method == 'POST':
         form = GuitarAddForm(request.POST)
         if form.is_valid():
             max_guitar_id = get_max_guitar_id()
-            max_body_id = get_max_body_id()
-            max_producer_id = get_max_producer_id()
             models.Guitars(
                id=int(max_guitar_id)+1,
                name=form.cleaned_data['name'],
@@ -57,16 +56,21 @@ def add(request):
                fretboard_material=form.cleaned_data['fretboard_material'],
                pick_guard=form.cleaned_data['pick_guard'],
                type=form.cleaned_data['type'],
-               body=models.Body(id = int(max_body_id) + 1,
-                          material=form.cleaned_data['body_material'],
-                          color=form.cleaned_data['body_color'],
-                          type=form.cleaned_data['body_type'],
-                          form=form.cleaned_data['body_form']).save(),
-               producer=models.Producer(id=int(max_producer_id)+1,
-                          name=form.cleaned_data['producer_name'],
-                          rating=form.cleaned_data['producer_rating'],
-                          info=form.cleaned_data['producer_info']).save()).save()
-
+               body_material=form.cleaned_data['body_material'],
+               body_color=form.cleaned_data['body_color'],
+               body_type=form.cleaned_data['body_type'],
+               body_form=form.cleaned_data['body_form'],
+               producer_name=form.cleaned_data['producer_name'],
+               producer_rating=form.cleaned_data['producer_rating'],
+               producer_info=form.cleaned_data['producer_info'],
+               bridge_name=form.cleaned_data['bridge_name'],
+               bridge_material=form.cleaned_data['bridge_material'],
+               bridge_color=form.cleaned_data['bridge_color'],
+               pickup_type=form.cleaned_data['pickup_type'],
+               pickup_set_type=form.cleaned_data['pickup_set_type'],).save()
+            #guitar = models.Guitars(pk=int(max_guitar_id)+1).save()
+            #t = GuitarAddForm(request.POST, instance=guitar)
+            #t.save()
             #guitar.save()
             return HttpResponseRedirect('/')
         else:

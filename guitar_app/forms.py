@@ -3,13 +3,13 @@ import models
 from mongodbforms import EmbeddedDocumentForm
 from mongodbforms import DocumentForm
 
-"""class GuitarAddForm(ModelForm):
+class GuitarAddForm(ModelForm):
     class Meta:
         model = models.Guitars
         fields = '__all__'
-        exclude = ['id']"""
+        exclude = ['id']
 
-class GuitarAddForm(Form):
+"""class GuitarAddForm(ModelForm):
     name = CharField(required=False)
     string_amount = IntegerField(required=False)
     price = IntegerField(required=False)
@@ -28,7 +28,7 @@ class GuitarAddForm(Form):
     bridge_material = CharField(required=False, label='material')
     bridge_color = CharField(required=False, label='color')
     pickup_type = CharField(required=False, label='type')
-    pickup_set_type = CharField(required=False, label='set type')
+    pickup_set_type = CharField(required=False, label='set type')"""
 
 
 
