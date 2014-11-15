@@ -18,7 +18,10 @@
         <a href="{% url 'statistics' %}" style="text-decoration: none;">Statistics <span class=""></span></a>
     </div>
     <div class="container" style="text-align: center">
-        {% render_table table %}
+        <div>
+        <div style="margin-left: 10%;position: absolute">{% render_table table1 %}</div>
+        <div style="position: relative">{% render_table table2 %}</div>
+        </div>
     </div>
     <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
 </body>

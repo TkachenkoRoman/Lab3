@@ -48,4 +48,38 @@ reduce_guitar_types = """function reduce(key, values) {
                          return {count: sum};
                          };"""
 
-finalize_guitar_types = """function(key, value){db.stat.insert(value);}"""
+map_guitar_price = """function() {
+                    Value = {price: this.price, low_price: 0, middle_price: 0, high_price: 0}
+                    if (Value.price <= 500)
+                    {
+                        Value.low_price = 1;
+                    }
+                    if (Value.price > 500 && Value.price <= 2000)
+                    {
+                        Value.middle_price = 1;
+                    }
+                    if (Value.price > 2000)
+                    {
+                        Value.high_price = 1;
+                    }
+                    emit(this.producer_name, Value);
+                    };"""
+
+reduce_guitar_price = """function reduce_prices(key, values) {
+                         reducedValue = {price: 0, low_price: 0, middle_price: 0, high_price: 0}
+                         values.forEach(function(value){
+                            if (value['price'] <= 500)
+                            {
+                                reducedValue.low_price += 1;
+                            }
+                            if (value['price'] > 500 && value['price'] <= 2000)
+                            {
+                                reducedValue.middle_price += 1;
+                            }
+                            if (value['price'] > 2000)
+                            {
+                                reducedValue.high_price += 1;
+                            }
+                         });
+                         return reducedValue;
+                         };"""

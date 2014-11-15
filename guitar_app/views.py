@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from guitar_app import tables, models
-from models import Guitars, map_guitar_types, reduce_guitar_types, finalize_guitar_types
+from models import Guitars, map_guitar_types, reduce_guitar_types, map_guitar_price, reduce_guitar_price
 from django_tables2   import RequestConfig
 from django.http import HttpResponse, HttpResponseRedirect
 from forms import *
@@ -42,12 +42,20 @@ def statistics(request):
     fetchall = []
     for pair in res:
         fetchall.append((pair.key, int(pair.value['count'])))
-    print fetchall
     data = [dict(zip([col for col in desc], row))for row in fetchall]
-    print data
-    table = tables.StatisticsTable(data)
-    RequestConfig(request).configure(table)
-    return render(request, "guitar_app/statistics.html", {"table": table})
+    table1 = tables.StatisticsTable(data)
+
+    res = Guitars.objects.map_reduce(map_guitar_price, reduce_guitar_price, 'prices')
+    desc = (("producer"), ("low_price"), ("middle_price"), ("high_price"))
+    fetchall = []
+    for pair in res:
+        fetchall.append((pair.key, int(pair.value['low_price']), int(pair.value['middle_price']), int(pair.value['high_price'])))
+    data = [dict(zip([col for col in desc], row))for row in fetchall]
+    table2 = tables.PriceTable(data)
+
+    RequestConfig(request).configure(table1)
+    RequestConfig(request).configure(table2)
+    return render(request, "guitar_app/statistics.html", {"table1": table1, "table2": table2})
 
 def get_max_guitar_id():
     max_id = None

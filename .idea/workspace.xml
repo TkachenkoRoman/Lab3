@@ -26,10 +26,9 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/guitar_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="1" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.0" vertical-offset="305" max-vertical-offset="952">
+            <state line="18" column="54" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="934" max-vertical-offset="1530">
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1415983270632" expanded="true" signature="288:1985" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -47,7 +46,7 @@
       <file leaf-file-name="tables.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/guitar_app/tables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="9" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+            <state line="29" column="12" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="697">
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -67,16 +66,18 @@
       <file leaf-file-name="statistics.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/guitar_app/templates/guitar_app/statistics.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
-              <folding />
+            <state line="21" column="35" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="561">
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/guitar_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="59" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.1442953" vertical-offset="645" max-vertical-offset="1700">
+            <state line="56" column="43" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.0" vertical-offset="968" max-vertical-offset="1836">
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -121,11 +122,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/guitar_app/templates/guitar_app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="10" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="901">
-              <folding />
+            <state line="25" column="71" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.40526316" vertical-offset="194" max-vertical-offset="867">
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,9 +151,11 @@
         <option value="$PROJECT_DIR$/guitar_app/templates/guitar_app/guitar_detail.html" />
         <option value="$PROJECT_DIR$/guitar_app/forms.py" />
         <option value="$PROJECT_DIR$/guitar_app/urls.py" />
-        <option value="$PROJECT_DIR$/guitar_app/models.py" />
         <option value="$PROJECT_DIR$/guitar_app/tables.py" />
+        <option value="$PROJECT_DIR$/guitar_app/models.py" />
         <option value="$PROJECT_DIR$/guitar_app/views.py" />
+        <option value="$PROJECT_DIR$/guitar_app/templates/guitar_app/statistics.html" />
+        <option value="$PROJECT_DIR$/guitar_app/templates/guitar_app/index.html" />
       </list>
     </option>
   </component>
@@ -586,7 +593,11 @@
     <entry file="file://$PROJECT_DIR$/guitar_app/templates/guitar_app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="10" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="901">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -595,7 +606,6 @@
         <state line="35" column="4" selection-start="1475" selection-end="1518" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1020">
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1415983270632" expanded="true" signature="288:1985" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -665,7 +675,11 @@
     <entry file="file://$PROJECT_DIR$/guitar_app/templates/guitar_app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="10" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="901">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -674,7 +688,6 @@
         <state line="35" column="4" selection-start="1475" selection-end="1518" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1020">
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1415983270632" expanded="true" signature="288:1985" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -744,7 +757,11 @@
     <entry file="file://$PROJECT_DIR$/guitar_app/templates/guitar_app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="10" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="901">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -760,7 +777,6 @@
         <state line="36" column="52" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="1020">
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1415983270632" expanded="true" signature="288:1985" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -818,7 +834,11 @@
     <entry file="file://$PROJECT_DIR$/guitar_app/templates/guitar_app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="10" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="901">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -853,13 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guitar_app/templates/guitar_app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="10" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/django/db/models/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="427" column="8" selection-start="19070" selection-end="19070" vertical-scroll-proportion="0.41778523" vertical-offset="6568" max-vertical-offset="17374">
@@ -885,6 +898,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/guitar_app/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="24" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guitar_app/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guitar_app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="41" selection-start="365" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/guitar_app/templates/guitar_app/guitar_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="14" selection-start="2896" selection-end="2896" vertical-scroll-proportion="-15.692307" vertical-offset="714" max-vertical-offset="1292">
@@ -898,58 +932,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guitar_app/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="24" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/guitar_app/templates/guitar_app/statistics.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guitar_app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="41" selection-start="365" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guitar_app/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guitar_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="1" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.0" vertical-offset="305" max-vertical-offset="952">
+        <state line="21" column="35" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="561">
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <marker date="1415983270632" expanded="true" signature="288:1985" placeholder="..." />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/guitar_app/tables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="9" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+        <state line="29" column="12" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="697">
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/guitar_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="54" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="934" max-vertical-offset="1530">
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/guitar_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="59" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.1442953" vertical-offset="645" max-vertical-offset="1700">
+        <state line="56" column="43" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.0" vertical-offset="968" max-vertical-offset="1836">
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guitar_app/templates/guitar_app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="71" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.40526316" vertical-offset="194" max-vertical-offset="867">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

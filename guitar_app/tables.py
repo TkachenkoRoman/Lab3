@@ -24,3 +24,12 @@ class StatisticsTable(tables.Table):
     count = tables.Column()
     class Meta:
         attrs = {"class": "paleblue"}
+
+class PriceTable(tables.Table):
+    #id = tables.Column()
+    producer = tables.Column()
+    low_price = tables.Column()
+    middle_price = tables.Column()
+    high_price = tables.Column()
+    class Meta:
+        attrs = {"class": "paleblue"}
